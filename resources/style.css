@@ -1,0 +1,248 @@
+:root {
+    --black-color: #110D0D;
+    --white-color: #FAFAFA;
+    --black-menu-color: #131212;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Crimson Text', serif;
+    margin:0; 
+    background: var(--white-color);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    margin: 2rem 8rem;
+    flex: 1;
+}
+
+@media only screen and (max-width: 700px) {
+    main {
+        margin: 2rem 6rem;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    main {
+        margin: 2rem 4rem;
+    }
+    header > nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    main {
+        margin: 2rem 2rem;
+    }
+}
+
+h1 {
+    font-size: 4.375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 550px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+}
+
+@media only screen and (max-width: 360px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+h2 {
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0.5rem;
+}
+
+.skill figcaption {
+    text-align: center;
+}
+
+.skill image {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.skill-section {
+    display: flex;
+    gap: 1.2rem;
+    flex: 1;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.row-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+button {
+    color: var(--white-color);
+    font-family: Crimson Text;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    display: flex;
+    padding: 0.5rem 0.625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.625rem;
+    background: var(--black-menu-color, #131212);
+    box-shadow: 2px 2px 4px 0px rgba(128, 128, 128, 0.25);
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #333;
+    transition: background-color 0.6s;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    color: var(--white-color);
+    /* height: 7.3125rem; */
+    flex-shrink: 0;
+    background: var(--black-color);
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header > nav {
+    margin: 2rem;
+}
+
+nav {
+    display:flex;
+    align-items: flex-start;
+    gap: 2.125rem;
+}
+
+#logo-container {
+    display: flex;
+    color: var(--white-color);
+}
+
+#logo-container img {
+    fill: white;
+    color:white;
+}
+
+#photo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5625rem;
+}
+
+#photo-container p {
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+
+#logo-container {
+    width: 10.125rem;
+    height: 4.0625rem;
+}
+
+#photo-container img {
+    width: 5.0625rem;
+    height: 5.0625rem;
+    border-radius: 3.125rem;
+}
+
+footer {
+    flex-shrink: 0;
+    color: var(--white-color);
+    display:flex;
+    flex-shrink: 0;
+    background: var(--black-color);
+    flex-direction: column;
+    bottom: 0;
+}
+
+.start-footer {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-networks {
+    display:flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.x {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+
+.logo-footer {
+    text-align: center;
+    width: 10.125rem;
+    height: 4.0625rem;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-text > * {
+    margin: 0 1rem;
+}
+
+.footer-text a:hover {
+    text-decoration: underline;
+}
+
+.social-network {
+    width: 1.75rem;
+    height: 1.75rem;
+    flex-shrink: 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2.0625rem;
+    flex-shrink: 0;
+}
