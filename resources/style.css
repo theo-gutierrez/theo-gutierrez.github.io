@@ -1,32 +1,58 @@
 :root {
-    --black-color: #110D0D;
-    --white-color: #FAFAFA;
-    --black-menu-color: #131212;
+    --background-color: #FAFAFA;
+    --background-head-footer-color: #110D0D;
+    --background-button-color: #131212;
+    --background-button-hover-color: #333;
+    --text-head-foot-color: #FAFAFA;
+    --text-main-color: #110D0D;
 }
+
+
+
+button #theme-toggle[data-theme='light'] {
+    --background-color: #FAFAFA;
+    --background-head-footer-color: #110D0D;
+    --background-button-color: #131212;
+    --background-button-hover-color: #333;
+    --text-head-foot-color: #FAFAFA;
+    --text-main-color: #110D0D;
+}
+
+.dark-theme {
+    --background-color: #211717;
+    --background-head-footer-color: #110D0D;
+    --background-button-color: #131212;
+    --background-button-hover-color: #333;
+    --text-head-foot-color: #FAFAFA;
+    --text-main-color: #FAFAFA;
+}
+
+
 
 body {
     min-height: 100vh;
     font-family: 'Crimson Text', serif;
     margin:0; 
-    background: var(--white-color);
+    background: var(--background-color);
+    color: var(--text-main-color);
     display: flex;
     flex-direction: column;
 }
 
 main {
-    margin: 2rem 8rem;
+    margin: 2rem 10rem;
     flex: 1;
 }
 
 @media only screen and (max-width: 700px) {
     main {
-        margin: 2rem 6rem;
+        margin: 2rem 4rem;
     }
 }
 
 @media only screen and (max-width: 425px) {
     main {
-        margin: 2rem 4rem;
+        margin: 2rem 2rem;
     }
     header > nav {
         flex-wrap: wrap;
@@ -37,7 +63,7 @@ main {
 
 @media only screen and (max-width: 375px) {
     main {
-        margin: 2rem 2rem;
+        margin: 2rem 1rem;
     }
 }
 
@@ -68,7 +94,7 @@ h2 {
 
 a {
     text-decoration: none;
-    color: white;
+    color: var(--text-head-foot-color);
 }
 
 .skill {
@@ -102,8 +128,8 @@ a {
     justify-content: space-between;
 }
 
-button {
-    color: var(--white-color);
+.main-btn {
+    color: var(--text-head-foot-color);
     font-family: Crimson Text;
     font-size: 1.2rem;
     font-style: normal;
@@ -116,24 +142,31 @@ button {
     align-items: center;
     gap: 0.625rem;
     border-radius: 0.625rem;
-    background: var(--black-menu-color, #131212);
+    background: var(--background-button-color);
     box-shadow: 2px 2px 4px 0px rgba(128, 128, 128, 0.25);
     border: none;
 }
 
-button:hover {
+.main-btn:hover {
     cursor: pointer;
-    background-color: #333;
+    background-color: var(--background-button-hover-color);
     transition: background-color 0.6s;
+}
+
+#theme-toggle {
+    width: 2rem;
+    height: 2rem;
+   background-color: transparent;
+   border-width: 0;
 }
 
 header {
     display: flex;
     flex-wrap: wrap;
-    color: var(--white-color);
+    color: var(--text-head-foot-color);
     /* height: 7.3125rem; */
     flex-shrink: 0;
-    background: var(--black-color);
+    background: var(--background-head-footer-color);
     justify-content: space-evenly;
     align-items: center;
 }
@@ -150,12 +183,12 @@ nav {
 
 #logo-container {
     display: flex;
-    color: var(--white-color);
+    color: var(--text-head-foot-color);
 }
 
 #logo-container img {
-    fill: white;
-    color:white;
+    fill: var(--text-head-foot-color);
+    color: var(--text-head-foot-color);
 }
 
 #photo-container {
@@ -187,10 +220,10 @@ nav {
 
 footer {
     flex-shrink: 0;
-    color: var(--white-color);
+    color: var(--text-head-foot-color);
     display:flex;
     flex-shrink: 0;
-    background: var(--black-color);
+    background: var(--background-head-footer-color);
     flex-direction: column;
     bottom: 0;
 }
@@ -223,6 +256,7 @@ footer {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
+    font-size: 0.8rem;
 }
 
 .footer-text > * {
