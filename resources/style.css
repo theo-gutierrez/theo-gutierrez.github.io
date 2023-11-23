@@ -8,16 +8,6 @@
 }
 
 
-
-button #theme-toggle[data-theme='light'] {
-    --background-color: #FAFAFA;
-    --background-head-footer-color: #110D0D;
-    --background-button-color: #131212;
-    --background-button-hover-color: #333;
-    --text-head-foot-color: #FAFAFA;
-    --text-main-color: #110D0D;
-}
-
 .dark-theme {
     --background-color: #211717;
     --background-head-footer-color: #110D0D;
@@ -156,8 +146,8 @@ a {
 #theme-toggle {
     width: 2rem;
     height: 2rem;
-   background-color: transparent;
-   border-width: 0;
+    background-color: transparent;
+    border-width: 0;
 }
 
 header {
